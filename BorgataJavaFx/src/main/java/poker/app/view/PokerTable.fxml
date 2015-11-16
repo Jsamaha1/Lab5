@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="APMainScreen" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: green;" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.app.view.PokerTableController">
+   <children>
+      <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: green;">
+         <bottom>
+            <AnchorPane prefHeight="107.0" prefWidth="800.0">
+               <children>
+                  <HBox layoutX="350.0" layoutY="4.0" prefHeight="100.0" prefWidth="414.0">
+                     <children>
+                        <GridPane prefHeight="21.0" prefWidth="315.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="94.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="221.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="txtP1Name" prefHeight="11.0" prefWidth="94.0" style="-fx-background-color: lightgreen;" />
+                              <HBox fx:id="hBoxP1Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <ToggleButton fx:id="btnP1SitLeave" mnemonicParsing="false" onAction="#handleP1SitLeave" styleClass="togglebutton" text="Sit" GridPane.rowIndex="1" />
+                              <Label fx:id="lblP1Name" prefHeight="33.0" prefWidth="92.0" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets top="5.0" />
+                           </opaqueInsets>
+                        </GridPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </bottom>
+         <top>
+            <AnchorPane prefHeight="107.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="350.0" layoutY="4.0" prefHeight="100.0" prefWidth="414.0">
+                     <children>
+                        <GridPane prefHeight="21.0" prefWidth="315.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="94.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="221.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="txtP3Name" prefHeight="11.0" prefWidth="94.0" style="-fx-background-color: lightgreen;" GridPane.rowIndex="1" />
+                              <HBox fx:id="hBoxP2Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ToggleButton fx:id="btnP3SitLeave" mnemonicParsing="false" onAction="#handleP3SitLeave" styleClass="togglebutton" text="Sit" />
+                              <Label fx:id="lblP3Name" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="15.0" layoutY="145.0" prefHeight="100.0" prefWidth="275.0">
+                     <children>
+                        <GridPane prefHeight="21.0" prefWidth="315.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="95.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="180.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="txtP2Name" prefHeight="11.0" prefWidth="94.0" style="-fx-background-color: lightgreen;" />
+                              <HBox fx:id="hBoxP2Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <ToggleButton fx:id="btnP2SitLeave" mnemonicParsing="false" onAction="#handleP2SitLeave" prefHeight="35.0" prefWidth="85.0" styleClass="togglebutton" text="Sit" GridPane.rowIndex="1" />
+                              <Label fx:id="lblP2Name" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutY="145.0" prefHeight="100.0" prefWidth="275.0">
+                     <children>
+                        <GridPane prefHeight="21.0" prefWidth="654.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="89.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="186.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox fx:id="hBoxP4Cards" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                              <ToggleButton fx:id="btnP4SitLeave" mnemonicParsing="false" onAction="#handleP4SitLeave" prefHeight="33.0" prefWidth="85.0" styleClass="togglebutton" text="Sit" GridPane.rowIndex="1" />
+                              <TextField fx:id="txtP4Name" style="-fx-background-color: lightgreen;" />
+                              <Label fx:id="lblP4Name" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox layoutX="48.0" layoutY="199.0" prefHeight="173.0" prefWidth="339.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="173.0" prefWidth="338.0" style="-fx-background-color: green;">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: green;">
+                                 <children>
+                                    <HBox layoutX="14.0" layoutY="10.0" prefHeight="68.0" prefWidth="317.0" style="-fx-background-color: green;" />
+                                 </children></AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: green;">
+                                 <children>
+                                    <Button fx:id="btnPlay" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handlePlay" text="Play" />
+                                    <Button fx:id="btnDraw" layoutX="89.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDraw" text="Draw" />
+                                    <HBox fx:id="HboxCommonArea" layoutX="171.0" layoutY="14.0" prefHeight="55.0" prefWidth="160.0" style="-fx-background-color: green;" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </center>         
+      </BorderPane>
+   </children>
+</AnchorPane>
